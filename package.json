@@ -1,6 +1,6 @@
 {
   "name": "seamless-immutable-umd",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects.",
   "main": "src/seamless-immutable.js",
   "devDependencies": {
@@ -31,20 +31,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rtfeldman/seamless-immutable.git"
+    "url": "https://github.com/fxck/seamless-immutable.git"
   },
   "keywords": [
-    "immutable"
+    "immutable",
+    "immutable-umd"
   ],
   "author": "Richard Feldman",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/rtfeldman/seamless-immutable/issues"
+    "url": "https://github.com/fxck/seamless-immutable/issues"
   },
   "jshintConfig": {
     "newcap": false,
     "validthis": true,
     "proto": true
   },
-  "homepage": "https://github.com/rtfeldman/seamless-immutable"
+  "homepage": "https://github.com/fxck/seamless-immutable"
 }

@@ -2,7 +2,7 @@
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module unless amdModuleId is set
     define([], function () {
-      return (factory());
+      return (root['Immutable'] = factory());
     });
   } else if (typeof exports === 'object') {
     // Node. Does not work with strict CommonJS, but
@@ -10,7 +10,7 @@
     // like Node.
     module.exports = factory();
   } else {
-    factory();
+    root['Immutable'] = factory();
   }
 }(this, function () {
 
@@ -421,5 +421,6 @@
   }
 })();
 
+return Immutable;
 
 }));

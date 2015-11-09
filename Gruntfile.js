@@ -33,10 +33,12 @@ module.exports = function(grunt) {
     },
     umd: {
       prod: {
-        src: 'seamless-immutable.production.min.js'
+        src: 'seamless-immutable.production.min.js',
+        objectToExport: 'Immutable'
       },
       dev: {
-        src: 'seamless-immutable.development.js'
+        src: 'seamless-immutable.development.js',
+        objectToExport: 'Immutable'
       }
     }
   });
