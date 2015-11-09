@@ -30,11 +30,20 @@ module.exports = function(grunt) {
           "seamless-immutable.production.min.js": ["seamless-immutable.production.min.js"]
         }
       }
+    },
+    umd: {
+      prod: {
+        src: 'seamless-immutable.production.min.js'
+      },
+      dev: {
+        src: 'seamless-immutable.development.js'
+      }
     }
   });
 
   grunt.loadNpmTasks("grunt-mocha-test");
   grunt.loadNpmTasks("grunt-contrib-uglify");
+  grunt.loadNpmTasks("grunt-umd");
 
   grunt.registerMultiTask("envify", "Envifies a source file to a target file", function() {
     var inputStream = fs.createReadStream(this.data.input);
@@ -49,6 +58,6 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask("test", "mochaTest");
-  grunt.registerTask("build", ["envify", "uglify"]);
+  grunt.registerTask("build", ["envify", "uglify", "umd:prod", "umd:dev"]);
   grunt.registerTask("default", ["build", "test"]);
 };
